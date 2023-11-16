@@ -1,0 +1,77 @@
+// set-product.mongodb
+
+use("pet_store")
+
+db.products.updateOne(
+  // query
+  {_title: "Lobo Gris"},
+  // change => operators
+  {
+    $set: {
+      price: 44400000,
+    }
+  },
+  {_title: "Beluga"},
+  // change => operators
+  {
+    $set: {
+      price: 32200000,
+    }
+  },
+  {_title: "Tortuga Marina"},
+  // change => operators
+  {
+    $set: {
+      price: 11100000,
+    }
+  },
+  {_title: "Hiena"},
+  // change => operators
+  {
+    $set: {
+      price: 123400000,
+    }
+  },
+  {_title: "Armadillo"},
+  // change => operators
+  {
+    $set: {
+      price: 554400000,
+    }
+  },
+  {_title: "Tiburon Martillo"},
+  // change => operators
+  {
+    $set: {
+      price: 124500000,
+    }
+  },
+  {_title: "Oso Polar"},
+  // change => operators
+  {
+    $set: {
+      price: 344400000,
+    }
+  },
+  {_title: "Oso Grizzly"},
+  // change => operators
+  {
+    $set: {
+      price: 65400000,
+    }
+  },
+  {_title: "Suricata"},
+  // change => operators
+  {
+    $set: {
+      price: 88800000,
+    }
+  },
+  {_title: "Pingüino"},
+  // change => operators
+  {
+    $set: {
+      price: 32400000,
+    }
+  },
+)
