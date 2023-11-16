@@ -1,0 +1,149 @@
+// products.mongodb
+
+use("pet_store")
+
+db.products.drop() // elimina los documentos creados en la colleccion anteriormente
+
+db.products.insertMany([
+  {
+    title: "Armadillo",
+    price: 2000000,
+    descripcion:"Armadillo, perfecto para el hogar",
+    category: "Mamífero",
+    img: "https://www.bing.com/images/search?view=detailV2&ccid=SQMynAdS&id=BEBE24526E4AB916AC5D9F8BAD669327A0820CE5&thid=OIP.SQMynAdSSPnCr-rAsg9ToAHaE8&mediaurl=https%3a%2f%2fimg2.rtve.es%2fi%2f%3fw%3d1600%26i%3d1296041634309.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.4903329c075248f9c2afeac0b20f53a0%3frik%3d5QyCoCeTZq2Lnw%26pid%3dImgRaw%26r%3d0&exph=1067&expw=1600&q=oso+polar&simid=608034534962191314&FORM=IRPRST&ck=09C3264F2CF8EA223A1FCB2DB1E622E2&selectedIndex=0"
+  },
+    {
+   title: "Oso polar",
+   price: 200000000,
+   descripcion:"Oso polar, perfecto para el cuidado de tus hijos",
+   category: "Mamífero",
+   img: "https://th.bing.com/th/id/OIP.SQMynAdSSPnCr-rAsg9ToAHaE8?rs=1&pid=ImgDetMain"
+    },
+     {
+   title: "Oso Grizzly",
+   price: 1000000,
+   descripcion:"Oso Grizzly, es un animal solitario",
+   category: "Mamífero",
+   img: "https://www.bing.com/ck/a?!&&p=60ca63b6fa9609f1JmltdHM9MTcwMDA5MjgwMCZpZ3VpZD0yNTAwZmE1My0wZjcxLTY2ODktMGNlMy1lOGE1MGVkZTY3MmYmaW5zaWQ9NTY3Nw&ptn=3&ver=2&hsh=3&fclid=2500fa53-0f71-6689-0ce3-e8a50ede672f&psq=oso+grizzly&u=a1aHR0cHM6Ly9lcy53aWtpcGVkaWEub3JnL3dpa2kvVXJzdXNfYXJjdG9zX2hvcnJpYmlsaXMjQWxpbWVudGFjacOzbg&ntb=1"
+    },
+     {
+   title: "Oso Hormiguero",
+   price: 22000000,
+   descripcion:"Oso Hormiguero, suelen comer hormigas",
+   category: "Mamífero",
+   img: "https://www.bing.com/ck/a?!&&p=7877e184ffdf097bJmltdHM9MTcwMDA5MjgwMCZpZ3VpZD0yNTAwZmE1My0wZjcxLTY2ODktMGNlMy1lOGE1MGVkZTY3MmYmaW5zaWQ9NTUzMg&ptn=3&ver=2&hsh=3&fclid=2500fa53-0f71-6689-0ce3-e8a50ede672f&u=a1L2ltYWdlcy9zZWFyY2g_cT1vc28raG9ybWlndWVybyZpZD0wOTNDNjhEODg3MzY4QjhGNjFFNjhDRTY0ODkyNkQ4QzU1NDRBOTNFJkZPUk09SVFGUkJB&ntb=1"
+    },
+     {
+   title: "Pingüino",
+   price: 234000000,
+   descripcion:"Pingüino, exclusivos del polo sur",
+   category: "Ave",
+   img: "https://www.bing.com/images/search?view=detailV2&ccid=gJiU4fb8&id=5C31D834B02FBEC5D4ACD33F9EA4507CB23AE827&thid=OIP.gJiU4fb8o5Mgu3JhpWtJ2gHaE1&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.809894e1f6fca39320bb7261a56b49da%3frik%3dJ%252bg6snxQpJ4%252f0w%26riu%3dhttp%253a%252f%252fwww.medioambiente.net%252fwp-content%252fuploads%252fping%25c3%25bcino.jpg%26ehk%3dcrNKrf4UQOHX%252f0UmpED2O8%252fgM4zt23pF4Scwg6bdGzg%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=770&expw=1181&q=ping%c3%bcino&simid=608043163566474110&FORM=IRPRST&ck=9D40B7D55F250CDB1E871C2F711F1792&selectedIndex=0"
+    },
+     {
+   title: "Cobra Real",
+   price: 2000000,
+   descripcion:"Cobra Real, serpiente venenosa más grande que existe",
+   category: "Reptíl",
+   img: "https://www.bing.com/images/search?view=detailV2&ccid=RME1zBjY&id=A9BA98615D6AE27079F559B3F6B1001AF85193B0&thid=OIP.RME1zBjY1nKLGw_PyJoeKAHaEo&mediaurl=https%3a%2f%2fwallpapercave.com%2fwp%2fwp3252424.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.44c135cc18d8d6728b1b0fcfc89a1e28%3frik%3dsJNR%252bBoAsfazWQ%26pid%3dImgRaw%26r%3d0&exph=1600&expw=2560&q=Cobra+real&simid=608043653129904837&FORM=IRPRST&ck=B7479FDCDC1080251BF00CBAC0DF877E&selectedIndex=2"
+    },
+     {
+   title: "Pulpo de Anillos Azules",
+   price: 2000000,
+   descripcion:"Pulpo de Anillos Azules, su veneno es mortal para el ser humano",
+   category: "Cefálopodo",
+   img: "https://www.bing.com/images/search?view=detailV2&ccid=VHbE4%2bPk&id=24B23EE31F678D8B57AE6F5F89AB925B0F06650C&thid=OIP.VHbE4-PksBrZMRgfDgqfPAHaEK&mediaurl=https%3a%2f%2fokdiario.com%2fimg%2f2021%2f09%2f13%2fpulpo-de-anillos-azules.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.5476c4e3e3e4b01ad931181f0e0a9f3c%3frik%3dDGUGD1uSq4lfbw%26pid%3dImgRaw%26r%3d0&exph=1013&expw=1800&q=pulpo+de+anillos+azules+especie&simid=608040517832755371&FORM=IRPRST&ck=151A9FF0AADC282DDE1264FD978E21CD&selectedIndex=2"
+    },
+     {
+   title: "Suricata",
+   price: 1000000,
+   descripcion:"Suricata, vive en madrigueras de hasta 40 suricatas",
+   category: "Mamífero",
+   img: "https://www.bing.com/images/search?view=detailV2&ccid=fNKj90KQ&id=B5D5B025CFAC4F46228B91E9275CDDDA13EF1DDA&thid=OIP.fNKj90KQ197TU0XVAiHfEQHaE8&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.7cd2a3f74290d7ded35345d50221df11%3frik%3d2h3vE9rdXCfpkQ%26riu%3dhttp%253a%252f%252fimmagini.4ever.eu%252fdata%252fdownload%252fanimali%252fselvatici%252fsuricata-169881.jpg%26ehk%3do8EEc40qxAR3tP38uNNdPxvpE1hSOKikiJl0Ue56V2Y%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=2848&expw=4272&q=suricata&simid=608040118422209645&FORM=IRPRST&ck=4314379666AF37583DAB6D65549DBBC2&selectedIndex=3"
+    },
+     {
+   title: "León",
+   price: 2000000,
+   descripcion:"León, el macho posee una gran melena",
+   category: "Mamífero",
+   img: "https://th.bing.com/th/id/OIP.7chVRdX9uGRhL7OsvIlPFgHaE8?w=266&h=180&c=7&r=0&o=5&pid=1.7"
+    },
+     {
+   title: "Tortuga de Galápagos",
+   price: 2000000,
+   descripcion:"Tortuga de las islas Galápagos, los más longevos de los vertebrados",
+   category: "Reptíl",
+   img: "https://www.bing.com/images/search?view=detailV2&ccid=oBOL3SnN&id=70B666F130C2B4DC7FEE1B0D7C56CE621D99582B&thid=OIP.oBOL3SnN_dj3RZDEYA0TggHaDt&mediaurl=https%3a%2f%2fs3.amazonaws.com%2fbusinessinsider.mx%2fwp-content%2fuploads%2f2020%2f06%2f16163832%2ftortugas-gigantes-galapagos.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.a0138bdd29cdfdd8f74590c4600d1382%3frik%3dK1iZHWLOVnwNGw%26pid%3dImgRaw%26r%3d0&exph=1000&expw=2000&q=tortuga+de+gal%c3%a1pagos&simid=607998895313089935&FORM=IRPRST&ck=64BCE0BF115570D0F117E91656D8DD0A&selectedIndex=5"
+    },
+     {
+   title: "Tortuga Marina",
+   price: 20200000,
+   descripcion:"Tortuga Marina, reptil marino que habita en los oceanos tropicales",
+   category: "Reptíl",
+   img: "https://www.bing.com/images/search?view=detailV2&ccid=a0oBE8iU&id=1031E148C78CCD74DEC87C2B808C2A7BA220BB85&thid=OIP.a0oBE8iU-0sXx7XVoVPjQAHaE9&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.6b4a0113c894fb4b17c7b5d5a153e340%3frik%3dhbsgonsqjIArfA%26riu%3dhttp%253a%252f%252fwww.fondosanimales.com%252fImagenes%252ftortuga-en-el-mar.jpg%26ehk%3dGoBMZ8zBtkQm%252bbBqGSY0Dk9kW2ZWl%252bbrqm6dDoSkSK4%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1071&expw=1600&q=tortuga+de+mar&simid=608042832813621446&FORM=IRPRST&ck=CE3B139ACA88395841CD7A216FA4445D&selectedIndex=0"
+    },
+     {
+   title: "Lobo Gris",
+   price: 24000000,
+   descripcion:"Lobo Gris, como un perro pero más agresivo y grande",
+   category: "Mamífero",
+   img: "https://www.bing.com/th?id=OIP.SsdKUZiIqIcH8x9OSveUyQHaEK&w=189&h=106&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+    },
+     {
+   title: "Hiena",
+   price: 20300000,
+   descripcion:"Hiena, Carroñeros por naturaleza",
+   category: "Mamífero",
+   img: "https://www.bing.com/images/search?view=detailV2&ccid=v5wL9BgW&id=6DBA75A797225AAF657A91424EB1BBC1972609D0&thid=OIP.v5wL9BgWdCwjvPamGygQyAHaE8&mediaurl=https%3a%2f%2fwww.infoescola.com%2fwp-content%2fuploads%2f2008%2f05%2fhyaena-619543244.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.bf9c0bf41816742c23bcf6a61b2810c8%3frik%3d0Akml8G7sU5CkQ%26pid%3dImgRaw%26r%3d0&exph=1667&expw=2500&q=hiena+especie&simid=607993346230071782&FORM=IRPRST&ck=A26BE4A2C6102F3051DF2F2053552127&selectedIndex=0"
+    },
+     {
+   title: "Jirafa",
+   price: 12000000,
+   descripcion:"Jirafa, el animal con el cuello mas largo",
+   category: "Mamífero",
+   img: "https://www.bing.com/images/search?view=detailV2&ccid=TVsfs78d&id=69BB911D60852F17DF90522575D6029BD51B2370&thid=OIP.TVsfs78deAKMMzl-WAZs8gHaFj&mediaurl=https%3a%2f%2fdefinicion.mx%2fwp-content%2fuploads%2f2014%2f01%2fjirafa.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.4d5b1fb3bf1d78028c33397e58066cf2%3frik%3dcCMb1ZsC1nUlUg%26pid%3dImgRaw%26r%3d0%26sres%3d1%26sresct%3d1%26srh%3d799%26srw%3d1066&exph=480&expw=640&q=jirafa&simid=608021220562255207&FORM=IRPRST&ck=45016693E11C7B8E0CEF074E3A6619F5&selectedIndex=10"
+    },
+     {
+   title: "Hipopótamo",
+   price: 42000000,
+   descripcion:"Hipopótamo, gran animal de caracter agresivo",
+   category: "Mamífero",
+   img: "https://th.bing.com/th/id/OIP.RkbyjSFOvUeU1mzRvR1YkgHaE7?rs=1&pid=ImgDetMain"
+    },
+     {
+   title: "Beluga",
+   price: 122000000,
+   descripcion:"Beluga, ballena blanca con ecolocalización",
+   category: "Mamífero",
+   img: "https://th.bing.com/th/id/R.d614e4ee77b5309fcbc84af9d29a9e55?rik=bk0Wgnpqy2R%2bng&riu=http%3a%2f%2f1.bp.blogspot.com%2f-oou7Fw1uLLQ%2fT3l_YJTrcOI%2fAAAAAAAAAoM%2fMZ53CuEtsas%2fs1600%2fforo.jpg&ehk=rG1H38HiT1OuiP4nUs%2b%2bd%2bGK8K95EtgaYdrDuLG30Hw%3d&risl=&pid=ImgRaw&r=0"
+    },
+     {
+   title: "Tiburon Martillo",
+   price: 32000000,
+   descripcion:"Tiburon Martillo, especie reguladora y atractiva a la vista humana",
+   category: "Pez",
+   img: "https://th.bing.com/th/id/OIP.tJqVdszYEsiVp-85MkfFfwHaEK?rs=1&pid=ImgDetMain"
+    },
+     {
+   title: "Cocodrilo del Nilo",
+   price: 55000000,
+   descripcion:"Cocodrilo del Nilo, controlador de plagas acuáticas",
+   category: "Reptíl",
+   img: "https://th.bing.com/th/id/R.1845475d0767d0360358a17ebe3d06cf?rik=DIFeKOTKm%2bjSIg&pid=ImgRaw&r=0"
+    },
+    {
+   title: "Leopardo de las Nieves",
+   price: 550000000,
+   descripcion:"Leopardo de las Nieves, controlador de plagas acuáticas",
+   category: "Mamífero",
+   img: "https://th.bing.com/th/id/OIP.1lHQDmuXMes-6PUeE3cOzAHaEo?w=281&h=180&c=7&r=0&o=5&pid=1.7"
+    },
+    {
+   title: "Cebra",
+   price: 50000000,
+   descripcion:"Cebra, tiene sus caracteristicas rayas negras y blancas",
+   category: "Mamífero",
+   img: "https://www.bing.com/images/search?view=detailV2&ccid=T6YmzszW&id=3B4DBF888AECC9FD76C77E21B851337CD7BF64A7&thid=OIP.T6YmzszWbvyx8O9_7Td8YQHaEo&mediaurl=https%3a%2f%2fwww.bioenciclopedia.com%2fwp-content%2fuploads%2f2013%2f12%2fcebra-800.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.4fa626ceccd66efcb1f0ef7fed377c61%3frik%3dp2S%252f13wzUbghfg%26pid%3dImgRaw%26r%3d0%26sres%3d1%26sresct%3d1%26srh%3d800%26srw%3d1280&exph=500&expw=800&q=cebra&simid=608023316500083269&FORM=IRPRST&ck=C91F42BB75C8CB9E8BE40343DE8A41EE&selectedIndex=0"
+    },
+    
+])
